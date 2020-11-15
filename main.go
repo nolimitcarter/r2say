@@ -80,6 +80,7 @@ func normalizeStringsLength(lines []string, maxwidth int) []string {
 	return ret
 }
 
+// calling for input
 func main() {
 	info, _ := os.Stdin.Stat()
 
