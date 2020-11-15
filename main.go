@@ -89,19 +89,35 @@ func main() {
 		return
 	}
 
+	var lines []string
+
 	reader := bufio.NewReader(os.Stdin)
-	var output []rune
 
 	for {
-		input, _, err := reader.ReadRune()
+		line, _, err := reader.ReadLine()
 		if err != nil && err == io.EOF {
 			break
 		}
-		output = append(output, input)
+		lines = append(lines, string(line))
 	}
 
-	for j := 0; j < len(output); j++ {
-		fmt.Printf("%c", output[j])
-	}
+	var r2 = `	\    _---_
+	 \  /-|o|-\
+	  _|-|-|o|-|_
+         /-|_______|-\
+         |-|=======|-|
+          |||-[]-||||
+          |||-[]-||||
+          |||{}-{}|||
+          ||_x_=__o||
+         /__-------__\
+`
 
+	lines = tabsToSpaces(lines)
+	maxwidth := calculateMaxWidth(lines)
+	messages := normalizeStringsLength(lines, maxwidth)
+	balloon := buildBalloon(messages, maxwidth)
+	fmt.Println(balloon)
+	fmt.Println(r2)
+	fmt.Println()
 }
