@@ -2,4 +2,4 @@
 
 <h1 align="center">r2say</h1>
 
-<p align="center">A rewrite of cowsay but with R2D2
+<p align="center">A rewrite of cowsay but with R2-D2
