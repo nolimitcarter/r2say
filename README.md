@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/nolimitcarter/r2say/blob/main/pics/image0.jpg" height="350" width="500px"></p>
+<p align="center"><img src="https://github.com/nolimitcarter/r2say/blob/main/pics/image0.jpg" width="500px"></p>
 
 <h1 align="center">r2say</h1>
 
